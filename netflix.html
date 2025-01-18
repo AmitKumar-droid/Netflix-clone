@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="pika.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Navigation Bar -->
+        <nav>
+            <span><img src="assets/images/logo.svg" alt="Netflix Logo"></span>
+            <div>
+                <button class="btn">English</button>
+                <button class="btn-red-sm" onclick="signOut()">Sign Out</button>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <div class="hero">
+            <span>Unlimited movies, TV shows, and more</span>
+            <span>Starts at ₹149. Cancel at any time.</span>
+            <div>
+                <input type="email" id="email" placeholder="Email Address">
+                <button class="btn-red" onclick="getStarted()">Get Started &gt;</button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search for movies or web series..." oninput="searchMovies()">
+        </div>
+
+        <!-- Search Results Section -->
+        <div class="section">
+            <h2>Search Results</h2>
+            <div id="search-results" class="trending-list"></div>
+        </div>
+
+        <!-- Reasons to Join Section -->
+        <section class="reasons-to-join">
+            <h2>Why Join Us?</h2>
+            <div class="reasons">
+                <div class="reason-item">
+                    <img src="assets/images/unlimited-content.png" alt="Unlimited Content">
+                    <h3>Unlimited Movies & TV Shows</h3>
+                    <p>Access an endless library of movies, TV shows, and documentaries, available anytime, anywhere.</p>
+                </div>
+                <div class="reason-item">
+                    <img src="assets/images/original-content.png" alt="Original Content">
+                    <h3>Exclusive Originals</h3>
+                    <p>Watch exclusive Netflix Originals that you can't find anywhere else.</p>
+                </div>
+                <div class="reason-item">
+                    <img src="assets/images/multiple-devices.png" alt="Multiple Devices">
+                    <h3>Watch on Any Device</h3>
+                    <p>Stream content on any device, including your phone, tablet, smart TV, or laptop.</p>
+                </div>
+                <div class="reason-item">
+                    <img src="assets/images/high-quality.png" alt="High Quality">
+                    <h3>High-Quality Streaming</h3>
+                    <p>Enjoy content in high definition or 4K UHD, with crisp visuals and vibrant sound.</p>
+                </div>
+                <div class="reason-item">
+                    <img src="assets/images/affordable.png" alt="Affordable Pricing">
+                    <h3>Affordable Plans</h3>
+                    <p>Choose a plan that fits your budget with flexible payment options.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions (FAQ) Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">How much does Netflix cost?</button>
+                <div class="faq-answer">
+                    <p>Netflix offers a variety of plans starting at ₹149 per month. You can cancel anytime.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I watch Netflix on multiple devices?</button>
+                <div class="faq-answer">
+                    <p>Yes! You can stream Netflix on a variety of devices, including phones, tablets, smart TVs, and laptops.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I cancel my subscription?</button>
+                <div class="faq-answer">
+                    <p>You can cancel your Netflix subscription anytime via your account settings.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Is Netflix available in my country?</button>
+                <div class="faq-answer">
+                    <p>Netflix is available in over 190 countries worldwide. Check the availability in your region.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Cookie Preferences</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-language">
+                <p>Netflix India</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Footer with curve effect -->
+    <div class="curve-container">
+        <div class="curve"></div>
+    </div>
+
+    <script src="tipo.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>

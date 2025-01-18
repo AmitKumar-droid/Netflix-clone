@@ -1,0 +1,391 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #141414;
+    color: white;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #141414;
+}
+
+nav img {
+    height: 30px;
+}
+
+nav div {
+    display: flex;
+    gap: 15px;
+}
+
+.btn,
+.btn-red-sm {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn-red-sm {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn:hover,
+.btn-red-sm:hover {
+    background-color: #f40612;
+}
+
+/* Hero Section */
+/* Hero Section with background image */
+.hero {
+    background-image: url('assets/images/netflix-background.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 60px 20px;
+    z-index: 1;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: -1;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #141414;
+}
+
+.hero span {
+    display: block;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.hero input {
+    padding: 12px;
+    width: 300px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.hero button {
+    padding: 12px 30px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero button:hover {
+    background-color: #f40612;
+}
+
+/* Reasons to Join Section */
+.reasons-to-join {
+    padding: 40px 20px;
+    background-color: #141414;
+    text-align: center;
+}
+
+.reasons-to-join h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.reason-item {
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+}
+
+.reason-item img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.reason-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.reason-item p {
+    font-size: 14px;
+}
+
+/* Search Bar */
+.search-container {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.search-container input {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #141414;
+    color: white;
+}
+
+/* Search Results Section */
+.section {
+    padding: 30px 20px;
+    background-color: #141414;
+    text-align: center;
+}
+
+.trending-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.trending-list div {
+    width: 30%;
+    background-color: #333;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.trending-list div img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Footer Curve */
+.curve-container {
+    overflow: hidden;
+    background-color: #141414;
+}
+
+.curve {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #141414 50%, transparent);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .reason-item {
+        width: 45%;
+    }
+
+    .trending-list div {
+        width: 45%;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero span {
+        font-size: 20px;
+    }
+
+    .hero input {
+        width: 80%;
+    }
+
+    .btn-red {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    .search-container input {
+        width: 90%;
+    }
+
+    .reasons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .reason-item {
+        width: 100%;
+    }
+
+    .trending-list div {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav div {
+        margin-top: 10px;
+    }
+
+    .hero input {
+        width: 100%;
+    }
+
+    .hero button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+/* FAQ Section */
+.faq {
+    background-color: #141414;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.faq-question {
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e50914;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #ccc;
+    text-align: left;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .faq h2 {
+        font-size: 24px;
+    }
+
+    .faq-question {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+}
+/* Footer Section */
+.footer {
+    background-color: #141414;
+    color: #888;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-links ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #e50914;
+}
+
+.footer-language p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Footer Curve */
+.curve-container {
+    overflow: hidden;
+    background-color: #141414;
+}
+
+.curve {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #141414 50%, transparent);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .footer-links ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        font-size: 16px;
+    }
+
+    .footer-language p {
+        font-size: 16px;
+    }
+}
+
